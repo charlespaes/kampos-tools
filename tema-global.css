@@ -1,0 +1,120 @@
+/* --- Tema Global Inspirado no GitHub - por Gemini & Charles Paes --- */
+
+/* 1. Configurações Gerais do Corpo da Página */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0;
+    background-color: #0d1117; /* Fundo escuro do GitHub */
+    color: #c9d1d9; /* Cor principal do texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Cabeçalho (para o botão 'Voltar') */
+header {
+    width: 100%;
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+/* 3. Container Principal (caixa de conteúdo) */
+.container {
+    background-color: #161b22; /* Fundo mais claro para conteúdo */
+    border: 1px solid #30363d; /* Borda sutil */
+    border-radius: 6px; /* Bordas arredondadas */
+    padding: 24px;
+    width: 90%;
+    max-width: 900px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+/* 4. Estilos de Texto */
+h1, h2, h3 {
+    border-bottom: 1px solid #21262d;
+    padding-bottom: .3em;
+    color: #c9d1d9;
+}
+
+a {
+    color: #58a6ff; /* Azul dos links do GitHub */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    filter: brightness(1.2);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 5. Estilos de Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 6px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #238636; /* Verde do GitHub */
+    border-color: rgba(240, 246, 252, 0.1);
+}
+.btn-primary:hover {
+    background-color: #2ea043;
+}
+
+.btn-secondary {
+    color: #c9d1d9;
+    background-color: #21262d; /* Cinza do GitHub */
+    border-color: rgba(240, 246, 252, 0.1);
+}
+.btn-secondary:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+}
+
+/* 6. Estilos para Formulários */
+textarea, input[type="text"] {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+/* 7. Rodapé */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    color: #8b949e; /* Cinza claro para texto secundário */
+    font-size: 0.9em;
+}

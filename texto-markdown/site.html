@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de Markdown</title>
+    
+    <link rel="stylesheet" href="../tema-global.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+	<header>
+    <a href="../" class="btn btn-secondary">&larr; Voltar para a Home</a>
+</header>
+
+    <div class="container">
+        <div id="input-view">
+            <h1>Cole seu Texto Markdown</h1>
+            <textarea id="markdown-input" placeholder="Cole seu texto aqui..."></textarea>
+            <div class="button-group">
+                <button id="generate-btn">Gerar Leitura</button>
+                <button id="clear-btn">Limpar</button>
+            </div>
+        </div>
+
+        <div id="output-view" class="hidden">
+            <div id="output-content">
+                </div>
+            <button id="back-btn">← Inserir Novo Texto</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
