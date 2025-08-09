@@ -1,0 +1,206 @@
+/* ================================ */
+/* Configurações Globais e Tema     */
+/* ================================ */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Largura confortável para leitura */
+}
+
+/* Classe utilitária para esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* ================================ */
+/* Estilos da Tela de Entrada       */
+/* ================================ */
+#input-view h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+textarea {
+    width: 100%;
+    height: 45vh; /* Um pouco mais de altura */
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#generate-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#generate-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+#clear-btn, #back-btn {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+#clear-btn:hover, #back-btn:hover {
+    background-color: #444;
+    transform: scale(1.02);
+}
+
+/* ================================ */
+/* Estilos da Tela de Leitura       */
+/* ================================ */
+#output-view {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#back-btn {
+    margin-top: 40px;
+    width: auto;
+    flex-grow: 0; /* Para o botão não esticar */
+}
+
+/* Otimização do CONTEÚDO gerado para leitura */
+#output-content h1,
+#output-content h2,
+#output-content h3 {
+    color: #ffffff;
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+#output-content p {
+    line-height: 1.8; /* Espaçamento ideal entre linhas */
+    font-size: 19px; /* Tamanho confortável para leitura longa */
+}
+
+#output-content a {
+    color: #4a9cff;
+    text-decoration: none;
+}
+
+#output-content a:hover {
+    text-decoration: underline;
+}
+
+#output-content ul, #output-content ol {
+    line-height: 1.8;
+    font-size: 19px;
+    padding-left: 25px;
+}
+
+#output-content code {
+    background-color: #252525;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+#output-content pre {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; /* Rolagem para blocos de código */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================ */
+/* Otimização para IMPRESSÃO        */
+/* ================================ */
+@media print {
+    body {
+        background-color: #ffffff; /* Fundo branco para impressão */
+        color: #000000; /* Texto preto */
+        font-size: 12pt;
+    }
+
+    .container, body {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Esconde os botões e a tela de entrada ao imprimir */
+    #input-view, #back-btn, .button-group {
+        display: none;
+    }
+
+    /* Garante que a tela de leitura seja visível */
+    #output-view {
+        display: block !important;
+        animation: none;
+    }
+
+    #output-content h1,
+    #output-content h2,
+    #output-content h3 {
+        border-bottom: 2px solid #000;
+        color: #000;
+        margin-top: 25pt;
+    }
+
+    #output-content p,
+    #output-content ul,
+    #output-content ol {
+        font-size: 12pt;
+        line-height: 1.5;
+        orphans: 3; /* Evita linhas órfãs */
+        widows: 3;  /* Evita linhas viúvas */
+    }
+    
+    #output-content a {
+        color: #000;
+        text-decoration: underline; /* Garante que links sejam visíveis */
+    }
+
+    #output-content pre, #output-content code {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        color: #000;
+    }
+}
